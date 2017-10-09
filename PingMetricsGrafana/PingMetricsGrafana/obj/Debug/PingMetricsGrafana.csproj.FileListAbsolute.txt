@@ -5,3 +5,6 @@ c:\users\krzysiek\documents\visual studio 2015\Projects\PingMetricsGrafana\PingM
 c:\users\krzysiek\documents\visual studio 2015\Projects\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.exe
 c:\users\krzysiek\documents\visual studio 2015\Projects\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.pdb
 C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\PingMetricsGrafana.exe.config
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.exe
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.pdb
