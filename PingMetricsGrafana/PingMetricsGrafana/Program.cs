@@ -54,16 +54,16 @@ namespace PingMetricsGrafana
             {
                 var reply = ping.Send(ipaddress, 3000);
                 ms = (int)reply.RoundtripTime;
-                Console.WriteLine("host: {0} miliseconds: {1}", ipaddress, ms);
+                Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
             }
             catch (Exception e)
             {
                 ms = -100;
-                Console.WriteLine("host: {0} miliseconds: {1}", ipaddress, ms);
+                Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
             }
         }
 
-        public static void WriteToInfluxDB()
+        public static void WriteToInfluxDB(string alias, int ms)
         {
             // write data into influxdb
         }
