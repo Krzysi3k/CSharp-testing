@@ -16,8 +16,13 @@ namespace PingMetricsGrafana
     {
         static void Main(string[] args)
         {
-            // ping hosts and get miliseconds to grafana
-            RunMain();
+            // ping hosts every 10 sec and send data to InfluxDB
+            while (true)
+            {
+                RunMain();
+                Thread.Sleep(5000);
+            }
+            
             Console.ReadLine();
         }
 

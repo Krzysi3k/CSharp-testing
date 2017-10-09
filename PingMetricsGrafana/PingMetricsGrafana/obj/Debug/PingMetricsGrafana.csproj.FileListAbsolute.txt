@@ -8,3 +8,7 @@ C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\PingMetricsGrafana\PingM
 C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\PingMetricsGrafana.exe.config
 C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.exe
 C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.pdb
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\PingMetricsGrafana.exe
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\PingMetricsGrafana.pdb
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.csprojResolveAssemblyReference.cache
