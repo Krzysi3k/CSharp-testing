@@ -16,26 +16,25 @@ namespace PingMetricsGrafana
     {
         static void Main(string[] args)
         {
-            // ping hosts every 10 sec and send data to InfluxDB
-            while (true)
-            {
-                RunMain();
-                Thread.Sleep(5000);
-            }
-            
+            // RUN HERE
+            RunMain();
             Console.ReadLine();
         }
 
         public static void RunMain()
         {
             // load initial configuration
-            RootObject r = LoadJSONdata();
-            List<Machine> m = r.machines;
-            string db = r.database;
-            foreach(var item in m)
-            {
-                Thread t = new Thread(() => GetResponse(item.ipaddress, item.alias, db));
-                t.Start();
+            RootObject json = LoadJSONdata();
+            List<Machine> m = json.machines;
+            string db = json.database;
+            while (true)
+            { 
+                foreach (var item in m)
+                {
+                    Thread t = new Thread(() => GetResponse(item.ipaddress, item.alias, db));
+                    t.Start();
+                }
+                Thread.Sleep(5000);
             }
         }
 
