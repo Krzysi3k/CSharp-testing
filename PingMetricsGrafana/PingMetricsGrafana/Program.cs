@@ -17,8 +17,6 @@ namespace PingMetricsGrafana
         static void Main(string[] args)
         {
             // ping hosts and get miliseconds to grafana
-            // :)
-            // :D
             RunMain();
             Console.ReadLine();
         }
