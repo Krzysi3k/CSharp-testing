@@ -48,7 +48,7 @@ namespace PingMetricsGrafana
             Ping ping = new Ping();
             try
             {
-                var reply = ping.Send(ipaddress, 3000);
+                var reply = ping.Send(ipaddress, 4000);
                 ms = (int)reply.RoundtripTime;
                 Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
                 WriteToInfluxDB(alias, ms, db);
@@ -68,7 +68,7 @@ namespace PingMetricsGrafana
             WebClient web = new WebClient();
             string measurement = "ping_request";
             string strPOST = measurement + ",servername=" + alias + " " + "ms=" + ms;
-            web.UploadString(url, strPOST);          
+            web.UploadString(url, strPOST);
         }
     }
 }
