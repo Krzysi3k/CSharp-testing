@@ -13,11 +13,6 @@ namespace PingMetricsGrafana
     {
         static void Main(string[] args)
         {
-            RunMain();
-        }
-
-        public static void RunMain()
-        {
             // initial configuration:
             RootObject json = LoadJSONdata();
             List<Machine> m = json.machines;
@@ -37,6 +32,7 @@ namespace PingMetricsGrafana
 
         public static RootObject LoadJSONdata()
         {
+            // get db name and machine names and ip addresses from JSON file:
             string jsonFile = File.ReadAllText("C:\\Temp\\config.json");
             RootObject r = JsonConvert.DeserializeObject<RootObject>(jsonFile);
             return r;
@@ -44,6 +40,7 @@ namespace PingMetricsGrafana
 
         public static void GetResponse(string ipaddress, string alias, string db)
         {
+            // get response in miliseconds and pass to write InfluxDB method
             int ms;
             Ping ping = new Ping();
             try
