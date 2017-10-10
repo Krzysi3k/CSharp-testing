@@ -32,7 +32,6 @@ namespace PingMetricsGrafana
 
         public static RootObject LoadJSONdata()
         {
-            // get db name and machine names and ip addresses from JSON file:
             string jsonFile = File.ReadAllText("C:\\Temp\\config.json");
             RootObject r = JsonConvert.DeserializeObject<RootObject>(jsonFile);
             return r;
@@ -40,7 +39,6 @@ namespace PingMetricsGrafana
 
         public static void GetResponse(string ipaddress, string alias, string db)
         {
-            // get response in miliseconds and pass to write InfluxDB method
             int ms;
             Ping ping = new Ping();
             try
@@ -60,7 +58,6 @@ namespace PingMetricsGrafana
 
         public static void WriteToInfluxDB(string alias, int ms, string db)
         {
-            // post data to influxdb
             Uri url = new Uri("http://10.24.69.6:8086/write?db=" + db);
             WebClient web = new WebClient();
             string measurement = "ping_request";
