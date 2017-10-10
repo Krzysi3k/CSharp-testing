@@ -9,6 +9,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Web;
+using System.Net.Http;
 
 namespace PingMetricsGrafana
 {
@@ -17,7 +18,8 @@ namespace PingMetricsGrafana
         static void Main(string[] args)
         {
             // RUN HERE
-            RunMain();
+            // RunMain();
+            WriteToInfluxDB("gunwo", 5, "db");
             Console.ReadLine();
         }
 
@@ -27,14 +29,17 @@ namespace PingMetricsGrafana
             RootObject json = LoadJSONdata();
             List<Machine> m = json.machines;
             string db = json.database;
+            HttpClient httpClient = new HttpClient();
+
             while (true)
-            { 
+            {
                 foreach (var item in m)
                 {
-                    Thread t = new Thread(() => GetResponse(item.ipaddress, item.alias, db));
+                    Thread t = new Thread(() => GetResponse(item.ipaddress, item.alias, db, httpClient));
                     t.Start();
                 }
-                Thread.Sleep(5000);
+                Thread.Sleep(10000);
+                Console.Clear();
             }
         }
 
@@ -45,7 +50,7 @@ namespace PingMetricsGrafana
             return r;
         }
 
-        public static void GetResponse(string ipaddress, string alias, string db)
+        public static void GetResponse(string ipaddress, string alias, string db, HttpClient httpClient)
         {
             int ms;
             Ping ping = new Ping();
@@ -62,9 +67,11 @@ namespace PingMetricsGrafana
             }
         }
 
-        public static void WriteToInfluxDB(string alias, int ms)
+        public static void WriteToInfluxDB(string alias, int ms, string db)
         {
-            // write data into influxdb
+            string measurement = "ping_request";
+            string url = measurement + ",servername=" + alias + " ms=" + ms;
+            Console.WriteLine(url);
         }
     }
 }

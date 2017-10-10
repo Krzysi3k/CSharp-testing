@@ -12,3 +12,9 @@ C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetrics
 C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\PingMetricsGrafana.pdb
 C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.csprojResolveAssemblyReference.cache
+C:\Users\kkes\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\PingMetricsGrafana.exe.config
+C:\Users\kkes\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.exe
+C:\Users\kkes\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.pdb
+C:\Users\kkes\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\PingMetricsGrafana.exe
+C:\Users\kkes\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\PingMetricsGrafana.pdb
+C:\Users\kkes\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.csprojResolveAssemblyReference.cache
