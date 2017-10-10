@@ -50,13 +50,13 @@ namespace PingMetricsGrafana
             {
                 var reply = ping.Send(ipaddress, 4000);
                 ms = (int)reply.RoundtripTime;
-                Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
+                //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
                 WriteToInfluxDB(alias, ms, db);
             }
             catch (Exception e)
             {
                 ms = -100;
-                Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
+                //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
                 WriteToInfluxDB(alias, ms, db);
             }
         }
