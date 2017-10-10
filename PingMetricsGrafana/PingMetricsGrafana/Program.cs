@@ -18,9 +18,7 @@ namespace PingMetricsGrafana
 
         public static void RunMain()
         {
-            // load initial configuration
-            // awd
-            // awd
+            // initial configuration
             RootObject json = LoadJSONdata();
             List<Machine> m = json.machines;
             string db = json.database;
