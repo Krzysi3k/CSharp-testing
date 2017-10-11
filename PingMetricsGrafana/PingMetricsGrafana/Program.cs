@@ -60,6 +60,7 @@ namespace PingMetricsGrafana
                 {
                     ms = -100;
                     //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
+                    // test
                     WriteToInfluxDB(alias, ms, db);
                 }
                 else
