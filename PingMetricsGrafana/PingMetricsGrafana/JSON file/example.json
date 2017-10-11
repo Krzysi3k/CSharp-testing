@@ -1,0 +1,8 @@
+{
+  "database":"ping_request_db",
+  "machines": [
+    {"ipaddress":"192.168.0.1","alias":"hostname1"},
+    {"ipaddress":"192.168.0.2","alias":"hostname2"},
+    {"ipaddress":"192.168.0.3","alias":"hostname3"}
+  ]
+}
