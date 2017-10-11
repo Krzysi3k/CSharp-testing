@@ -43,14 +43,23 @@ namespace PingMetricsGrafana
             Ping ping = new Ping();
             try
             {
-                var reply = ping.Send(ipaddress, 4000);
+                var reply = ping.Send(ipaddress, 5000);
                 ms = (int)reply.RoundtripTime;
-                //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
-                WriteToInfluxDB(alias, ms, db);
             }
             catch (Exception e)
             {
+                // set minus value for grafana mappings
                 ms = -100;
+            }
+            
+            if(ms <=0)
+            {
+                ms = -100;
+                //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
+                WriteToInfluxDB(alias, ms, db);
+            }
+            else
+            {
                 //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
                 WriteToInfluxDB(alias, ms, db);
             }
