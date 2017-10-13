@@ -53,7 +53,7 @@ namespace PingMetricsGrafana
                 {
                     ms = -100;
                 }
-                if (ms >= 0)
+                if (ms > 0)
                     break;
                 else
                     ms = -100; // negative value for grafana mappings
