@@ -39,6 +39,7 @@ namespace PingMetricsGrafana
 
         public static void GetResponse(string ipaddress, string alias, string db)
         {
+            // get response in ms, igore single packet loss:
             int ms = 0;
             Ping ping = new Ping();
             for(int i = 1; i <= 2; i++)
@@ -55,7 +56,7 @@ namespace PingMetricsGrafana
                 if (ms >= 0)
                     break;
                 else
-                    ms = -100;
+                    ms = -100; // negative value for grafana mappings
             }
 
             //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
