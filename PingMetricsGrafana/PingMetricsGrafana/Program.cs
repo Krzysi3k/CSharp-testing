@@ -15,12 +15,11 @@ namespace PingMetricsGrafana
         {
             // initial configuration:
             RootObject json = LoadJSONdata();
-            List<Machine> m = json.machines;
             string db = json.database;
 
             while (true)
             {
-                foreach (var item in m)
+                foreach (var item in json.machines)
                 {
                     Thread t = new Thread(() => GetResponse(item.ipaddress, item.alias, db));
                     t.Start();
