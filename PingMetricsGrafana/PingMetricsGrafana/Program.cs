@@ -39,40 +39,27 @@ namespace PingMetricsGrafana
 
         public static void GetResponse(string ipaddress, string alias, string db)
         {
-            int ms;
+            int ms = 0;
             Ping ping = new Ping();
-            try
+            for(int i = 1; i <= 2; i++)
             {
-                var reply = ping.Send(ipaddress, 4000);
-                ms = (int)reply.RoundtripTime;
-            }
-            catch (Exception e)
-            {
-                ms = -100;
-            }
-            
-            if(ms <= 0)
-            {
-                // try send ping again (single packet loss acceptance)
-                var reply = ping.Send(ipaddress, 4000);
-                ms = (int)reply.RoundtripTime;
-                if(ms <= 0)
+                try
+                {
+                    var reply = ping.Send(ipaddress, 4000);
+                    ms = (int)reply.RoundtripTime;
+                }
+                catch (Exception e)
                 {
                     ms = -100;
-                    //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
-                    WriteToInfluxDB(alias, ms, db);
                 }
+                if (ms >= 0)
+                    break;
                 else
-                {
-                    //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
-                    WriteToInfluxDB(alias, ms, db);
-                }
+                    ms = -100;
             }
-            else
-            {
-               //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
-               WriteToInfluxDB(alias, ms, db);
-            }
+
+            //Console.WriteLine("host: {0} alias: {1} ms: {2}", ipaddress, alias, ms);
+            WriteToInfluxDB(alias, ms, db);
         }
 
         public static void WriteToInfluxDB(string alias, int ms, string db)

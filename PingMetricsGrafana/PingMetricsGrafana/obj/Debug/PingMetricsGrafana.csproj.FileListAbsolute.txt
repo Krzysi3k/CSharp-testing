@@ -16,3 +16,4 @@ C:\Users\kkes\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGraf
 C:\Users\kkes\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.pdb
 C:\Users\kkes\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\PingMetricsGrafana.exe
 C:\Users\kkes\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\bin\Debug\PingMetricsGrafana.pdb
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\PingMetricsGrafana\PingMetricsGrafana\obj\Debug\PingMetricsGrafana.csprojResolveAssemblyReference.cache
