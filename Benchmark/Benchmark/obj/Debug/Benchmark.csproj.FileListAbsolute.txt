@@ -1,0 +1,6 @@
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\Benchmark\Benchmark\bin\Debug\Benchmark.exe.config
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\Benchmark\Benchmark\bin\Debug\Benchmark.exe
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\Benchmark\Benchmark\bin\Debug\Benchmark.pdb
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\Benchmark\Benchmark\obj\Debug\Benchmark.csprojResolveAssemblyReference.cache
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\Benchmark\Benchmark\obj\Debug\Benchmark.exe
+C:\Users\Krzysiek\Documents\GitHub\CSharp-testing\Benchmark\Benchmark\obj\Debug\Benchmark.pdb
